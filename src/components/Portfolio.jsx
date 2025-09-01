@@ -440,7 +440,7 @@ export default function Portfolio() {
 
             <div className="flex items-center gap-3">
               <motion.a
-                href="/cv/edison-guzman-cv.pdf"
+                href="/cv.pdf"
                 download
                 className="hidden sm:inline-flex items-center gap-2 rounded-xl px-4 py-2.5 bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 transition text-sm font-bold shadow-lg shadow-emerald-500/25"
                 whileHover={{ scale: 1.05 }}
@@ -1201,7 +1201,7 @@ export default function Portfolio() {
               </motion.a>
 
               <motion.a
-                href="/cv/edison-guzman-cv.pdf"
+                href="/cv.pdf"
                 download
                 className="inline-flex items-center gap-2 rounded-xl px-4 py-2 border border-blue-500/30 bg-blue-500/10 hover:bg-blue-500/20 hover:border-blue-400 transition-all duration-300 group"
                 whileHover={{ scale: 1.05, y: -2 }}
