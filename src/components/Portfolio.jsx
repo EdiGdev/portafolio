@@ -514,16 +514,6 @@ export default function Portfolio() {
             className="grid lg:grid-cols-2 gap-12 items-center"
           >
             <div>
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2 }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium mb-6"
-              >
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                Disponible para proyectos
-              </motion.div>
-
               <h1 className="text-5xl md:text-7xl font-black leading-tight">
                 Desarrollador{" "}
                 <span className="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
@@ -937,12 +927,7 @@ export default function Portfolio() {
 
       {/* Contact Section */}
       <section id="contact" className="max-w-6xl mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
             Charla Conmigo
           </h2>
@@ -950,280 +935,111 @@ export default function Portfolio() {
 
           <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent p-8">
             <div className="text-center mb-12">
-              <motion.div
-                initial={{ scale: 0.8, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="mb-8"
-              >
+              <div className="mb-8">
                 <div className="relative inline-block">
-                  <motion.div
-                    className="absolute -inset-2 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full opacity-20 blur-xl"
-                    animate={{
-                      scale: [1, 1.1, 1],
-                      opacity: [0.2, 0.4, 0.2],
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                  />
+                  <div className="absolute -inset-2 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full opacity-20 blur-xl" />
                   <div className="relative w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-r from-emerald-500 to-blue-500 flex items-center justify-center">
-                    <motion.div
-                      animate={{
-                        rotate: [0, 10, -10, 0],
-                        scale: [1, 1.1, 1],
-                      }}
-                      transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                      }}
-                    >
-                      <FaRocket className="text-white text-2xl" />
-                    </motion.div>
+                    <FaRocket className="text-white text-2xl" />
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.p
-                className="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed max-w-3xl mx-auto"
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
-              >
+              <p className="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed max-w-3xl mx-auto">
                 Siempre estoy dispuesto a escuchar sobre nuevos proyectos, ideas
                 o colaboraciones emocionantes.
-              </motion.p>
+              </p>
 
-              <motion.div
-                initial={{ y: 30, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                viewport={{ once: true }}
-                className="mb-12"
-              >
+              <div className="mb-12">
                 <p className="text-lg text-slate-400 mb-8">
                   <span className="font-semibold text-emerald-400">
                     Envíame un correo electrónico
                   </span>{" "}
                 </p>
 
-                {/* Botón principal de contacto con animación */}
-                <motion.a
+                {/* Botón principal de contacto sin animaciones */}
+                <a
                   href="mailto:edison.guzman@usjs.edu.co?subject=Hola Edison! Tengo una idea increíble&body=Hola Edison,%0A%0AMe encantaría platicar contigo sobre:%0A%0A- Mi proyecto/idea:%0A%0A- Presupuesto estimado:%0A%0A- Timeframe:%0A%0A%0ASaludos!"
                   className="group relative inline-flex items-center gap-3 rounded-2xl px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 font-semibold text-lg transition-all duration-300 shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-105"
-                  whileHover={{
-                    scale: 1.05,
-                    boxShadow: "0 20px 40px -12px rgba(16, 185, 129, 0.4)",
-                  }}
-                  whileTap={{ scale: 0.98 }}
                 >
-                  <motion.div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <motion.div
-                    animate={{
-                      x: [0, 3, -3, 0],
-                      rotate: [0, 5, -5, 0],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    <FaEnvelope className="text-xl" />
-                  </motion.div>
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <FaEnvelope className="text-xl" />
                   <span className="relative z-10">¡Escribámoslo juntos!</span>
-                  <motion.div
-                    className="w-2 h-2 bg-white rounded-full opacity-0 group-hover:opacity-100"
-                    animate={{
-                      scale: [0, 1, 0],
-                      opacity: [0, 1, 0],
-                    }}
-                    transition={{
-                      duration: 1.5,
-                      repeat: Infinity,
-                      delay: 0.5,
-                    }}
-                  />
-                </motion.a>
-              </motion.div>
+                </a>
+              </div>
             </div>
 
-            {/* Información de contacto con animaciones */}
+            {/* Información de contacto sin animaciones */}
             <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <motion.div
-                className="text-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-              >
-                <motion.div
-                  className="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-500/20 transition-colors"
-                  animate={{
-                    rotate: [0, 5, -5, 0],
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                >
+              <div className="text-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
+                <div className="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-500/20 transition-colors">
                   <FaEnvelope className="text-emerald-400 text-xl" />
-                </motion.div>
+                </div>
                 <p className="text-sm text-slate-400 mb-2">Email</p>
                 <p className="font-medium text-emerald-300">
                   edison.guzman@usjs.edu.co
                 </p>
-              </motion.div>
+              </div>
 
-              <motion.div
-                className="text-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 1.0 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-              >
-                <motion.div
-                  className="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-green-500/20 transition-colors"
-                  animate={{
-                    scale: [1, 1.1, 1],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                >
+              <div className="text-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
+                <div className="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-green-500/20 transition-colors">
                   <FaWhatsapp className="text-green-400 text-xl" />
-                </motion.div>
+                </div>
                 <p className="text-sm text-slate-400 mb-2">WhatsApp</p>
                 <p className="font-medium text-green-300">+57 301 596 5595</p>
-              </motion.div>
+              </div>
 
-              <motion.div
-                className="text-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 1.2 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-              >
-                <motion.div
-                  className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/20 transition-colors"
-                  animate={{
-                    y: [0, -3, 3, 0],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                >
+              <div className="text-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
+                <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/20 transition-colors">
                   <FaMapMarkerAlt className="text-blue-400 text-xl" />
-                </motion.div>
+                </div>
                 <p className="text-sm text-slate-400 mb-2">Ubicación</p>
                 <p className="font-medium text-blue-300">
                   Colombia - San Agustín - Huila
                 </p>
-              </motion.div>
+              </div>
             </div>
 
-            {/* Enlaces sociales con efectos hover */}
-            <motion.div
-              className="flex flex-wrap justify-center gap-4"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 1.4 }}
-              viewport={{ once: true }}
-            >
-              <motion.a
+            {/* Enlaces sociales sin animaciones */}
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
                 href="mailto:edison.guzman@usjs.edu.co"
                 className="inline-flex items-center gap-2 rounded-xl px-4 py-2 border border-emerald-500/30 bg-emerald-500/10 hover:bg-emerald-500/20 hover:border-emerald-400 transition-all duration-300 group"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
               >
-                <motion.div
-                  animate={{ rotate: [0, 10, 0] }}
-                  transition={{ duration: 0.3 }}
-                  className="group-hover:animate-pulse"
-                >
-                  <FaEnvelope className="text-emerald-400" />
-                </motion.div>
+                <FaEnvelope className="text-emerald-400" />
                 Email
-              </motion.a>
+              </a>
 
-              <motion.a
+              <a
                 href="https://github.com/EdiGdev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl px-4 py-2 border border-purple-500/30 bg-purple-500/10 hover:bg-purple-500/20 hover:border-purple-400 transition-all duration-300 group"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
               >
-                <motion.div
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <FaGithub className="text-purple-400" />
-                </motion.div>
+                <FaGithub className="text-purple-400" />
                 GitHub
-              </motion.a>
+              </a>
 
-              <motion.a
+              <a
                 href="https://wa.me/573015965595"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl px-4 py-2 border border-green-500/30 bg-green-500/10 hover:bg-green-500/20 hover:border-green-400 transition-all duration-300 group"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
               >
-                <motion.div
-                  animate={{
-                    scale: [1, 1.2, 1],
-                  }}
-                  transition={{
-                    duration: 1.5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="group-hover:animate-bounce"
-                >
-                  <FaWhatsapp className="text-green-400" />
-                </motion.div>
+                <FaWhatsapp className="text-green-400" />
                 WhatsApp
-              </motion.a>
+              </a>
 
-              <motion.a
+              <a
                 href="/cv.pdf"
                 download
                 className="inline-flex items-center gap-2 rounded-xl px-4 py-2 border border-blue-500/30 bg-blue-500/10 hover:bg-blue-500/20 hover:border-blue-400 transition-all duration-300 group"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
               >
-                <motion.div
-                  animate={{
-                    y: [0, -2, 2, 0],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                >
-                  <FaDownload className="text-blue-400" />
-                </motion.div>
+                <FaDownload className="text-blue-400" />
                 Descargar CV
-              </motion.a>
-            </motion.div>
+              </a>
+            </div>
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* Footer */}
