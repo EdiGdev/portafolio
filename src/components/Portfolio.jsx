@@ -5,7 +5,6 @@ import {
   FaReact,
   FaPhp,
   FaGithub,
-  FaLinkedin,
   FaWhatsapp,
   FaDownload,
   FaEnvelope,
@@ -34,7 +33,6 @@ import {
   SiExpress,
   SiLivewire,
   SiBootstrap,
-  SiCloudflare,
   SiVercel,
 } from "react-icons/si";
 
@@ -311,8 +309,7 @@ export default function Portfolio() {
         "MySQL",
         "WhatsApp API",
       ],
-      image:
-        "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1600&auto=format&fit=crop",
+      image: "/reparalo.png",
       links: [{ href: "#", label: "Proyecto Privado", icon: <FaCode /> }],
       features: [
         "Gestión de reparaciones con estados",
@@ -329,8 +326,7 @@ export default function Portfolio() {
       description:
         "Aplicación POS moderna para múltiples establecimientos y cajas registradoras. Permite gestionar vendedores, ventas en tiempo real, turnos y reportes avanzados. Incluye integración con Firebase para notificaciones en vivo.",
       tech: ["Laravel", "Tailwind CSS", "MySQL", "Firebase"],
-      image:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1600&auto=format&fit=crop",
+      image: "/posclic.png",
       links: [{ href: "#", label: "Proyecto Privado", icon: <FaCode /> }],
       features: [
         "Soporte multi-establecimientos",
@@ -347,8 +343,7 @@ export default function Portfolio() {
       description:
         "Plataforma que conecta usuarios con servicios locales: taxis, restaurantes, profesionales, deliverys. Búsqueda inteligente con geolocalización y sistema de reseñas integrado.",
       tech: ["Laravel", "React Native", "Tailwind CSS"],
-      image:
-        "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=1600&auto=format&fit=crop",
+      image: "/publiya.png",
       links: [
         {
           href: "https://publiya.co",
@@ -386,8 +381,7 @@ export default function Portfolio() {
       description:
         "Solución web para la empresa Boom Tecnológico que combina tienda online y billetera digital. Permite a los clientes comprar en puntos de venta, acumular puntos, canjearlos, y enviarlos o recibirlos entre usuarios. Incluye login de clientes y sistema de referidos.",
       tech: ["Laravel", "React Native", "MySQL", "Tailwind CSS"],
-      image:
-        "https://img.freepik.com/free-vector/digital-wallet-abstract-concept-illustration_335657-3875.jpg?w=1380&t=st=1693595829~exp=1693599429~hmac=b28ed9b5bffb97a259fb1ef7a9ceea0bb8e6bbcd3a4f458a19c8aa8c4a5b9e8a",
+      image: "/boom.png",
       links: [{ href: "#", label: "Proyecto Privado", icon: <FaCode /> }],
       features: [
         "Tienda online integrada",
