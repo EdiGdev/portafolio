@@ -47,9 +47,9 @@ export default function Portfolio() {
       const sections = [
         "about",
         "skills",
-        "education",
         "experience",
         "projects",
+        "education",
         "contact",
       ];
       const scrollPosition = window.scrollY + 100;
@@ -84,9 +84,9 @@ export default function Portfolio() {
   const navItems = [
     { label: "Sobre mí", href: "#about", icon: <FaCode /> },
     { label: "Habilidades", href: "#skills", icon: <FaServer /> },
-    { label: "Formación", href: "#education", icon: <FaGraduationCap /> },
     { label: "Experiencia", href: "#experience", icon: <FaBriefcase /> },
     { label: "Proyectos", href: "#projects", icon: <FaMobile /> },
+    { label: "Formación", href: "#education", icon: <FaGraduationCap /> },
     { label: "Contacto", href: "#contact", icon: <FaEnvelope /> },
   ];
 
@@ -95,106 +95,106 @@ export default function Portfolio() {
       {
         name: "Laravel",
         icon: <FaLaravel />,
-        description: "Framework PHP para desarrollo web robusto",
+        description: "",
       },
       {
         name: "PHP",
         icon: <FaPhp />,
-        description: "Lenguaje de programación del lado servidor",
+        description: "",
       },
       {
         name: "Python",
         icon: <FaCode />,
-        description: "Lenguaje versátil para desarrollo backend",
+        description: "",
       },
       {
         name: "Node.js",
         icon: <SiNodedotjs />,
-        description: "Runtime JavaScript para backend",
+        description: "",
       },
       {
         name: "Express.js",
         icon: <SiExpress />,
-        description: "Framework web minimalista para Node.js",
+        description: "",
       },
       {
         name: "Livewire",
         icon: <SiLivewire />,
-        description: "Stack dinámico para Laravel",
+        description: "",
       },
     ],
     Frontend: [
       {
         name: "React",
         icon: <FaReact />,
-        description: "Biblioteca para interfaces de usuario",
+        description: "",
       },
       {
         name: "React Native",
         icon: <FaReact />,
-        description: "Desarrollo móvil multiplataforma",
+        description: "",
       },
       {
         name: "TypeScript",
         icon: <SiTypescript />,
-        description: "JavaScript tipado para mayor robustez",
+        description: "",
       },
       {
         name: "JavaScript",
         icon: <SiJavascript />,
-        description: "Lenguaje de programación web",
+        description: "",
       },
       {
         name: "Next.js",
         icon: <SiNextdotjs />,
-        description: "Framework React para producción",
+        description: "",
       },
     ],
     "Estilos & UI": [
       {
         name: "TailwindCSS",
         icon: <SiTailwindcss />,
-        description: "Framework CSS utility-first",
+        description: "",
       },
       {
         name: "CSS",
         icon: <FaCode />,
-        description: "Hojas de estilo en cascada",
+        description: "",
       },
       {
         name: "Bootstrap",
         icon: <SiBootstrap />,
-        description: "Framework CSS responsivo",
+        description: "",
       },
     ],
     "Base de Datos": [
       {
         name: "MySQL",
         icon: <SiMysql />,
-        description: "Sistema de gestión de bases de datos relacionales",
+        description: "",
       },
       {
         name: "PostgreSQL",
         icon: <SiPostgresql />,
-        description: "Base de datos relacional avanzada",
+        description: "",
       },
     ],
     "DevOps & Tools": [
       {
         name: "Git",
         icon: <FaGitAlt />,
-        description: "Control de versiones distribuido",
+        description: "",
       },
       {
         name: "Docker",
         icon: <FaDocker />,
-        description: "Contenedores para desarrollo y deploy",
+        description: "",
       },
 
       {
         name: "Vercel",
         icon: <SiVercel />,
-        description: "Plataforma de deployment",
+        description: "",
       },
     ],
   };
@@ -680,81 +680,6 @@ export default function Portfolio() {
         </motion.div>
       </section>
 
-      {/* Education Section */}
-      <section id="education" className="max-w-7xl mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Formación Académica
-          </h2>
-          <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full mb-12" />
-
-          <div className="space-y-8">
-            {education.map((edu, index) => (
-              <motion.div
-                key={edu.institution}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="relative"
-              >
-                <div className="absolute left-8 top-12 bottom-0 w-0.5 bg-gradient-to-b from-white/20 to-transparent" />
-
-                <div className="flex gap-6">
-                  <div
-                    className={`relative z-10 flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br ${edu.color} flex items-center justify-center text-2xl text-white shadow-xl`}
-                  >
-                    {edu.icon}
-                  </div>
-
-                  <div className="flex-1 rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 hover:bg-white/10 transition">
-                    <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
-                      <div>
-                        <div className="text-xs font-medium text-emerald-400 uppercase tracking-wide mb-1">
-                          {edu.level}
-                        </div>
-                        <h3 className="text-xl font-bold text-white mb-1">
-                          {edu.degree}
-                        </h3>
-                        <p className="text-slate-300 font-medium">
-                          {edu.shortName}
-                        </p>
-                      </div>
-                      <div className="text-right">
-                        <div className="flex items-center gap-1 text-slate-400 text-sm mb-1">
-                          <FaMapMarkerAlt className="text-xs" />
-                          {edu.location}
-                        </div>
-                        <div className="flex items-center gap-1 text-slate-400 text-sm">
-                          <FaCalendarAlt className="text-xs" />
-                          {edu.period}
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="flex flex-wrap gap-2">
-                      {edu.highlights.map((highlight) => (
-                        <span
-                          key={highlight}
-                          className="px-3 py-1 text-xs rounded-full bg-white/10 text-slate-300 border border-white/10"
-                        >
-                          {highlight}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </section>
-
       {/* Experience Section */}
       <section id="experience" className="max-w-7xl mx-auto px-4 py-20">
         <motion.div
@@ -925,6 +850,81 @@ export default function Portfolio() {
         </motion.div>
       </section>
 
+      {/* Education Section */}
+      <section id="education" className="max-w-7xl mx-auto px-4 py-20">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Formación Académica
+          </h2>
+          <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full mb-12" />
+
+          <div className="space-y-8">
+            {education.map((edu, index) => (
+              <motion.div
+                key={edu.institution}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="absolute left-8 top-12 bottom-0 w-0.5 bg-gradient-to-b from-white/20 to-transparent" />
+
+                <div className="flex gap-6">
+                  <div
+                    className={`relative z-10 flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br ${edu.color} flex items-center justify-center text-2xl text-white shadow-xl`}
+                  >
+                    {edu.icon}
+                  </div>
+
+                  <div className="flex-1 rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 hover:bg-white/10 transition">
+                    <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
+                      <div>
+                        <div className="text-xs font-medium text-emerald-400 uppercase tracking-wide mb-1">
+                          {edu.level}
+                        </div>
+                        <h3 className="text-xl font-bold text-white mb-1">
+                          {edu.degree}
+                        </h3>
+                        <p className="text-slate-300 font-medium">
+                          {edu.shortName}
+                        </p>
+                      </div>
+                      <div className="text-right">
+                        <div className="flex items-center gap-1 text-slate-400 text-sm mb-1">
+                          <FaMapMarkerAlt className="text-xs" />
+                          {edu.location}
+                        </div>
+                        <div className="flex items-center gap-1 text-slate-400 text-sm">
+                          <FaCalendarAlt className="text-xs" />
+                          {edu.period}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-wrap gap-2">
+                      {edu.highlights.map((highlight) => (
+                        <span
+                          key={highlight}
+                          className="px-3 py-1 text-xs rounded-full bg-white/10 text-slate-300 border border-white/10"
+                        >
+                          {highlight}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="max-w-6xl mx-auto px-4 py-20">
         <div>
@@ -958,7 +958,7 @@ export default function Portfolio() {
 
                 {/* Botón principal de contacto sin animaciones */}
                 <a
-                  href="mailto:edison.guzman@usjs.edu.co?subject=Hola Edison! Tengo una idea increíble&body=Hola Edison,%0A%0AMe encantaría platicar contigo sobre:%0A%0A- Mi proyecto/idea:%0A%0A- Presupuesto estimado:%0A%0A- Timeframe:%0A%0A%0ASaludos!"
+                  href="mailto:edison_guzman@uajs.edu.co?subject=Hola Edison! Tengo una idea increíble&body=Hola Edison,%0A%0AMe encantaría platicar contigo sobre:%0A%0A- Mi proyecto/idea:%0A%0A- Presupuesto estimado:%0A%0A- Timeframe:%0A%0A%0ASaludos!"
                   className="group relative inline-flex items-center gap-3 rounded-2xl px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 font-semibold text-lg transition-all duration-300 shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:scale-105"
                 >
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -976,7 +976,7 @@ export default function Portfolio() {
                 </div>
                 <p className="text-sm text-slate-400 mb-2">Email</p>
                 <p className="font-medium text-emerald-300">
-                  edison.guzman@usjs.edu.co
+                  edison_guzman@uajs.edu.co
                 </p>
               </div>
 
@@ -1002,7 +1002,7 @@ export default function Portfolio() {
             {/* Enlaces sociales sin animaciones */}
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="mailto:edison.guzman@usjs.edu.co"
+                href="mailto:edison_guzman@uajs.edu.co"
                 className="inline-flex items-center gap-2 rounded-xl px-4 py-2 border border-emerald-500/30 bg-emerald-500/10 hover:bg-emerald-500/20 hover:border-emerald-400 transition-all duration-300 group"
               >
                 <FaEnvelope className="text-emerald-400" />
@@ -1061,7 +1061,7 @@ export default function Portfolio() {
                 Hecho con React + Tailwind CSS
               </div>
               <div className="flex gap-4 text-lg">
-                <a
+                {/* <a
                   href="https://github.com/EdiGdev"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -1084,7 +1084,7 @@ export default function Portfolio() {
                   className="text-slate-400 hover:text-white transition"
                 >
                   <FaWhatsapp />
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
