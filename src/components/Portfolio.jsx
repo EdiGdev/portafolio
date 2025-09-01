@@ -81,9 +81,9 @@ export default function Portfolio() {
 
   const navItems = [
     { label: "Sobre mí", href: "#about", icon: <FaCode /> },
-    { label: "Habilidades", href: "#skills", icon: <FaServer /> },
     { label: "Experiencia", href: "#experience", icon: <FaBriefcase /> },
     { label: "Proyectos", href: "#projects", icon: <FaMobile /> },
+    { label: "Habilidades", href: "#skills", icon: <FaServer /> },
     { label: "Formación", href: "#education", icon: <FaGraduationCap /> },
     { label: "Contacto", href: "#contact", icon: <FaEnvelope /> },
   ];
@@ -656,58 +656,6 @@ export default function Portfolio() {
         </motion.div>
       </section>
 
-      {/* Skills Section */}
-      <section id="skills" className="max-w-7xl mx-auto px-4 py-20">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Habilidades Técnicas
-          </h2>
-          <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full mb-12" />
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {Object.entries(skills).map(([category, items]) => (
-              <motion.div
-                key={category}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 hover:bg-white/10 transition"
-              >
-                <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-400 to-emerald-400" />
-                  {category}
-                </h3>
-                <div className="space-y-4">
-                  {items.map((skill) => (
-                    <div key={skill.name} className="group">
-                      <div className="flex items-start gap-3">
-                        <span className="text-xl text-emerald-400 mt-0.5 group-hover:scale-110 transition">
-                          {skill.icon}
-                        </span>
-                        <div>
-                          <div className="font-medium text-white group-hover:text-emerald-400 transition">
-                            {skill.name}
-                          </div>
-                          <p className="text-sm text-slate-400 mt-1">
-                            {skill.description}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </section>
-
       {/* Experience Section */}
       <section id="experience" className="max-w-7xl mx-auto px-4 py-20">
         <motion.div
@@ -871,6 +819,58 @@ export default function Portfolio() {
                       </a>
                     ))}
                   </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="max-w-7xl mx-auto px-4 py-20">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Habilidades Técnicas
+          </h2>
+          <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full mb-12" />
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {Object.entries(skills).map(([category, items]) => (
+              <motion.div
+                key={category}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 hover:bg-white/10 transition"
+              >
+                <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-400 to-emerald-400" />
+                  {category}
+                </h3>
+                <div className="space-y-4">
+                  {items.map((skill) => (
+                    <div key={skill.name} className="group">
+                      <div className="flex items-start gap-3">
+                        <span className="text-xl text-emerald-400 mt-0.5 group-hover:scale-110 transition">
+                          {skill.icon}
+                        </span>
+                        <div>
+                          <div className="font-medium text-white group-hover:text-emerald-400 transition">
+                            {skill.name}
+                          </div>
+                          <p className="text-sm text-slate-400 mt-1">
+                            {skill.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </motion.div>
             ))}
