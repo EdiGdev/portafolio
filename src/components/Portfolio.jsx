@@ -282,7 +282,7 @@ export default function Portfolio() {
     {
       company: "Publiya",
       role: "Backend & Frontend Developer",
-      period: "2024 – Presente",
+      period: "2024",
       type: "Freelance",
       description:
         "Plataforma innovadora de servicios urbanos conectando usuarios con proveedores locales en San Agustín Huila. Arquitectura escalable para múltiples ciudades.",
@@ -292,6 +292,22 @@ export default function Portfolio() {
         "Aplicacion Nativa con React Native",
       ],
       color: "from-purple-500 to-pink-600",
+    },
+    {
+      company: "Boom Tecnológico",
+      role: "Backend & Frontend Developer",
+      period: "2025 – Presente",
+      type: "Freelance",
+      description:
+        "Desarrollo de una plataforma integral para la gestión de reparaciones y ventas de artículos y accesorios. Incluye un sistema POS conectado con e-commerce, gestión de fidelización de clientes mediante billetera de puntos y venta online de productos desde el mismo sistema.",
+      highlights: [
+        "Plataforma completa para gestión de reparaciones",
+        "Sistema POS integrado para ventas físicas y online",
+        "Gestión de fidelización con acumulación de puntos para clientes",
+        "Conexión con tienda online para comercialización de productos",
+        "Desarrollo con tecnologías modernas para backend y frontend",
+      ],
+      color: "from-sky-500 to-blue-600",
     },
   ];
 
@@ -310,7 +326,13 @@ export default function Portfolio() {
         "WhatsApp API",
       ],
       image: "/reparalo.png",
-      links: [{ href: "#", label: "Proyecto Privado", icon: <FaCode /> }],
+      links: [
+        {
+          href: "https://reparalo.co",
+          label: "Visitar",
+          icon: <FaExternalLinkAlt />,
+        },
+      ],
       features: [
         "Gestión de reparaciones con estados",
         "Soporte para múltiples establecimientos",
@@ -327,7 +349,13 @@ export default function Portfolio() {
         "Aplicación POS moderna para múltiples establecimientos y cajas registradoras. Permite gestionar vendedores, ventas en tiempo real, turnos y reportes avanzados. Incluye integración con Firebase para notificaciones en vivo.",
       tech: ["Laravel", "Tailwind CSS", "MySQL", "Firebase"],
       image: "/posclic.png",
-      links: [{ href: "#", label: "Proyecto Privado", icon: <FaCode /> }],
+      links: [
+        {
+          href: "https://posclic.com",
+          label: "Visitar",
+          icon: <FaExternalLinkAlt />,
+        },
+      ],
       features: [
         "Soporte multi-establecimientos",
         "Múltiples cajas por establecimientos",
@@ -382,7 +410,13 @@ export default function Portfolio() {
         "Solución web para la empresa Boom Tecnológico que combina tienda online y billetera digital. Permite a los clientes comprar en puntos de venta, acumular puntos, canjearlos, y enviarlos o recibirlos entre usuarios. Incluye login de clientes y sistema de referidos.",
       tech: ["Laravel", "React Native", "MySQL", "Tailwind CSS"],
       image: "/boom.png",
-      links: [{ href: "#", label: "Proyecto Privado", icon: <FaCode /> }],
+      links: [
+        {
+          href: "https://boomtecnologico.com",
+          label: "Visitar",
+          icon: <FaExternalLinkAlt />,
+        },
+      ],
       features: [
         "Tienda online integrada",
         "Wallet de puntos",
